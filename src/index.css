@@ -15,9 +15,10 @@ body {
 
  nav {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: /* space-between */center;
     /**/
     width: 100vw;
+    height: 70px;
     background-color: rgb(47, 54, 61);
  }
 
@@ -41,7 +42,10 @@ body {
     justify-content: center;
     align-items: center; */
     /**/
-    background-color: rgb(250, 250, 250);
+    background-color: rgba(0, 0, 255, 0.119)/* rgb(250, 250, 250) */;
+    
+    height: 100px;
+    width: 100px;
 
 }
 
@@ -56,8 +60,14 @@ body {
     justify-content: center;
     align-items: center;
     /**/
-    background-color: rgb(37, 37, 37);
-    color: white;
+    /* background-color: rgb(37, 37, 37); */
+    /* color: white; */
+
+    background-color: rgba(0, 128, 0, 0.173)/* rgb(250, 250, 250) */;
+    
+    height: 100px;
+    width: 100px;
+
 }
 
  /* ********************INNER COMPONENTS/CONTAINERS/THINGS******************** */
