@@ -7,8 +7,8 @@ const ArrayContainer = () => {
   const numElements = new Array(3).fill(null)
 
   return (
-    <div className="arrayContainer">
-      <div className="overlay"></div>
+    <div className="xarrayContainer">
+      <div className="xoverlay"></div>
       {numElements.map(element => {
         return <Box key={crypto.randomUUID()} />
       })}
