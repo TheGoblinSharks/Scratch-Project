@@ -3,13 +3,14 @@
 
 * {
     /* border: 1px solid red; */
+    /* border: 1px solid red; */
     box-sizing: border-box;
     border-radius: 4px;
 }
 /**/
 body {
     display: flex;
-    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(255, 255, 255);
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -18,9 +19,10 @@ body {
  nav {
     display: flex;
     justify-content: space-between;
+    justify-content: space-between;
     /**/
     width: 100%;
-    height: 7.5vh;
+    height: 7vh/* 70px */;
     background-color: rgb(47, 54, 61);
     border-radius: 0;
  }
@@ -28,11 +30,11 @@ body {
 .column-wrapper {
     display: flex;
     /**/
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgba(172, 81, 81, 0.078);
+
     width: 100vw;
-    height: 88.5vh;
+    height: 93vh;
 }
 
 .left {
@@ -41,9 +43,14 @@ body {
     justify-content: center;
     align-items: center;
 
+    background-color: rgba(0, 0, 255, 0.1)/* rgb(250, 250, 250) */;
     /* width: 500px; */
     /* flex-grow: 2; */
-    width: 50vw;
+    width: 40vw;
+    
+
+
+
 }
 
 .left-main-container {
@@ -52,22 +59,19 @@ body {
     justify-content: flex-start;
     align-items: center;
     /**/
-    background-color: rgb(250, 250, 250);
-    border: 20px solid #eee;
-    box-shadow: 1px 1px 2px #ddd;
-    /**/
+    background-color: rgba(0, 0, 255, 0.5)/* rgb(250, 250, 250) */;
+    
     height: 80%;
     width: 80%;
+    
 
-    padding:1.5rem;
-    border-radius:10px;
 }
 
 .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-left: 1px solid gray; */
+    background-color: rgba(0, 128, 0, 0.1)/* rgb(250, 250, 250) */;
     flex-grow: 1;
 }
 
@@ -76,13 +80,14 @@ body {
     justify-content: center;
     align-items: center;
     /**/
-    background-color: rgb(37, 37, 37);
-    color: rgb(87, 103, 184);
-    border: 20px solid #eee;
-    box-shadow: 1px 1px 2px #ddd;
-    /**/
+    /* background-color: rgb(37, 37, 37); */
+    /* color: white; */
+
+    background-color: rgba(0, 128, 0, 0.5)/* rgb(250, 250, 250) */;
+    
     height: 80%;
     width: 80%;
+
 }
 
  /* ******************** INNER COMPONENTS/CONTAINERS/THINGS ******************** */
@@ -94,26 +99,29 @@ body {
 }
 
 .primary-solution-display {
-    /* border: 1px solid green; */
+    border: 1px solid green;
 }
 
-.code-input-title{
-    
+img {
+    margin: 15px;
+}
+.circle {
+    border-radius: 50%;
 }
 
 
 
 
-/********************* ANIMATION STUFF ******************** */
+/*********************ANIMATION STUFF******************** */
 .arrayContainer {
   /* position: relative; */
   height: 20vh;
-  width:40vw;
+  width: 45vw;
   display: flex;
   align-items: center;
   justify-content: space-around; 
-  border: 1px solid rgb(87, 103, 184);
-  /* background-color: aqua; */
+  border: 1px solid black;
+  background-color: aqua;
   /* margin: 20px;  */
 }
 
