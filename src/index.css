@@ -84,6 +84,7 @@ body {
   justify-content: space-around; 
   border: 1px solid black;
   margin: 20px; 
+}
 
 .box {
   height: 100px;
@@ -92,3 +93,4 @@ body {
   display: inline-block;
   border: 1px solid black;
   transition: background-color 0.3s; 
+}
