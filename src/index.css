@@ -1,26 +1,22 @@
+.arrayContainer {
+  position: relative;
+  height: 300px;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  border: 1px solid black;
+  margin: 20px; 
 
-* {
-border: 1px solid red;
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+  transition: background-color 0.3s; 
 }
 
-body {
-
+.hover {
+  background-color: yellow; 
 }
-
- nav {
-  background-color: rgb(47, 54, 61);
-  width: 100vh;
- }
-
-.column-wrapper {
-  /* display:  */
-  background-color: rgb(255, 255, 255);
-}
-
- .left {
-
- }
-
- .right {
-
- }

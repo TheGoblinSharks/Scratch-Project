@@ -1,59 +1,21 @@
 
-
 .arrayContainer {
-  position:relative;
-  height:300px;
-  width:900px;
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
-  border:1px solid black;
+  justify-content: space-between;
+  margin: 10px;
 }
 
 .box {
-  height:200px;
-  width:200px;
-  border:1px solid black;
+  height: 50px; 
+  width: 50px; 
+  margin: 2px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  transition: background-color 0.3s;
 }
 
 .hover {
-  position:absolute;
-  height:200px;
-  width:200px;
-  border:2px solid green;
-  
-}
-
-.hover:hover {
-  transition:
-}
-
-
-
-
-
-* {
-    border: 1px solid red;
-}
-
-body {
-
-}
-
-nav {
-    background-color: rgb(47, 54, 61);
-    width: 100vh;
-}
-
-.column-wrapper {
-    /* display:  */
-    background-color: rgb(255, 255, 255);
-}
-
-.left {
-
-}
-
-.right {
-
-}
+  background-color: yellow; 
