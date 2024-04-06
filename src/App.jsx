@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import ArrayContainer from './components/ArrayContainer'
+import ArrayContainer from './experimental/ArrayContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +11,7 @@ function App() {
   
   return (
     <>
-      {/* <ArrayContainer/> */}
+      <ArrayContainer />
     </>
   )
 }
