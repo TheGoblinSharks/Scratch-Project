@@ -1,6 +1,6 @@
 
 
-.arrayContainer {
+.xarrayContainer {
   position:relative;
   height:300px;
   width:900px;
@@ -8,24 +8,31 @@
   align-items: center;
   justify-content: flex-start;
   border:1px solid black;
+  margin-top:100vh;
 }
 
-.box {
+.xbox {
   height:200px;
   width:200px;
   border:1px solid black;
 }
 
-.hover {
+.xoverlay {
   position:absolute;
   height:200px;
   width:200px;
-  border:2px solid green;
-  
+  /* border:5px solid green; */
+  background:rgba(0,128,0,.3);
+  /* transform: translateX(200%);
+  transform: translateY(100%); */
+  transform:translate(0,0);
+  transition:translate 4s;
 }
 
-.hover:hover {
-  transition:
+.xoverlay:hover {
+   transform: translateX(200%); 
+
+  /* transform:translate(200%,100%); */
 }
 
 
