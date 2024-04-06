@@ -1,0 +1,59 @@
+
+
+.arrayContainer {
+  position:relative;
+  height:300px;
+  width:750px;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  border:1px solid black;
+}
+
+.box {
+  height:200px;
+  width:200px;
+  border:1px solid black;
+}
+
+.hover {
+  position:absolute;
+  height:200px;
+  width:200px;
+  border:2px solid green;
+  
+}
+
+.hover:hover {
+  transition:
+}
+
+
+
+
+
+* {
+    border: 1px solid red;
+}
+
+body {
+
+}
+
+nav {
+    background-color: rgb(47, 54, 61);
+    width: 100vh;
+}
+
+.column-wrapper {
+    /* display:  */
+    background-color: rgb(255, 255, 255);
+}
+
+.left {
+
+}
+
+.right {
+
+}
