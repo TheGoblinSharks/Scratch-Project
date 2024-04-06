@@ -4,6 +4,9 @@ import '../../index.css';
 const ArrayContainer = ({ arrayData, currentIndex }) => {
   return (
     <div className="arrayContainer">
+      <div className="overlay">
+        
+      </div>
       {arrayData.map((item, index) => (
         <div key={index} className={`box ${index === currentIndex ? 'hover' : ''}`}>
           {item}
