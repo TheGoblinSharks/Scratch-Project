@@ -1,3 +1,4 @@
+
  /* ********************MAIN STRUCTURE/CONTAINERS******************** */
 
 * {
@@ -26,6 +27,9 @@ body {
     width: 100vh;
 }
 
+.hover {
+  background-color: yellow; 
+}
 .left {
     display: flex;
     /* width: 33vh; */
@@ -69,3 +73,22 @@ body {
 .primary-solution-display {
     border: 1px solid green;
 }
+
+/***Ted stuff ***/
+.arrayContainer {
+  position: relative;
+  height: 300px;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  border: 1px solid black;
+  margin: 20px; 
+
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+  transition: background-color 0.3s; 

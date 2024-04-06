@@ -1,19 +1,25 @@
-import { useState } from 'react'
-import ArrayContainer from './components/ArrayContainer'
+import { useState } from 'react';
+import ArrayContainer from './components/ArrayContainer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const arrayData = [1, 2, 3, 4]; 
+  const handleButtonClick = () => {
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex < arrayData.length - 1) {
+        return prevIndex + 1;
+      } else {
+        return 0;
+      }
+    });
+  };
 
-
-
-
-  // some change for testing
-  
   return (
-    <>
-      {/* <ArrayContainer/> */}
-    </>
-  )
+    <div>
+      <button onClick={handleButtonClick}>Move</button>
+      <ArrayContainer arrayData={arrayData} currentIndex={currentIndex} />
+    </div>
+  );
 }
 
-export default App
+export default App;
