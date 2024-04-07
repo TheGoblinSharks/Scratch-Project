@@ -1,12 +1,8 @@
-import React from 'react';
-import UserInputCode from '../userInputCode';
+
+// import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = () => {
-  const description = `
-  for (let i = 0; i < 4; i++) {
-    console.log(array[i]);
-  };
-  `
+
     return (
       <div className="left">
         <div className="left-main-container">
@@ -75,8 +71,3 @@ const LeftMainContainer = () => {
   };
   
   export default LeftMainContainer;
-  
-  /*
-              Arrays in javascript are zero-indexed which means that we start at position 0 instead of position 1
-  
-  */
