@@ -13,7 +13,7 @@ const LeftMainContainer = () => {
             How do we move between each element in an array?
           </h2>
           <div>
-            Explanation
+            <span className="explanation">Explanation:</span>
             <p>
               We can use a handy built in JavaScript statement called a for loop!
             </p>
@@ -57,8 +57,8 @@ const LeftMainContainer = () => {
             (<b>What do you think will happen to our yellow block when you press the button?</b>)
           </p>
 
-          <button className="move-button">
-            MOVE
+          <button className="iterate-button">
+            ITERATE
           </button>
 
           <h2>
