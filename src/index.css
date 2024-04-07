@@ -2,7 +2,7 @@
  /* ********************MAIN STRUCTURE/CONTAINERS******************** */
 
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
     /* border-radius: 3px; */
 }
@@ -10,23 +10,28 @@
 body {
     display: flex;
     background-color: rgb(255, 255, 255);
-    /* margin: 0; */
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
  nav {
     display: flex;
-    justify-content: /* space-between */center;
+    justify-content: space-between;
     /**/
-    width: 100vw;
-    height: 70px;
+    width: 100%;
+    height: 7vh/* 70px */;
     background-color: rgb(47, 54, 61);
  }
 
 .column-wrapper {
     display: flex;
     /**/
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgba(172, 81, 81, 0.078);
+
     width: 100vw;
+    height: 93vh;
 }
 
 .left {
@@ -35,6 +40,14 @@ body {
     justify-content: center;
     align-items: center;
 
+    background-color: rgba(0, 0, 255, 0.1)/* rgb(250, 250, 250) */;
+    /* width: 500px; */
+    /* flex-grow: 2; */
+    width: 40vw;
+    
+
+
+
 }
 
 .left-main-container {
@@ -42,10 +55,11 @@ body {
     justify-content: center;
     align-items: center; */
     /**/
-    background-color: rgba(0, 0, 255, 0.119)/* rgb(250, 250, 250) */;
+    background-color: rgba(0, 0, 255, 0.5)/* rgb(250, 250, 250) */;
     
-    height: 100px;
-    width: 100px;
+    height: 80%;
+    width: 80%;
+    
 
 }
 
@@ -53,6 +67,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 128, 0, 0.1)/* rgb(250, 250, 250) */;
+    flex-grow: 1;
 }
 
 .right-main-container {
@@ -63,10 +79,10 @@ body {
     /* background-color: rgb(37, 37, 37); */
     /* color: white; */
 
-    background-color: rgba(0, 128, 0, 0.173)/* rgb(250, 250, 250) */;
+    background-color: rgba(0, 128, 0, 0.5)/* rgb(250, 250, 250) */;
     
-    height: 100px;
-    width: 100px;
+    height: 80%;
+    width: 80%;
 
 }
 
@@ -82,22 +98,33 @@ body {
     border: 1px solid green;
 }
 
-/***Ted stuff ***/
+img {
+    margin: 15px;
+}
+.circle {
+    border-radius: 50%;
+}
+
+
+
+
+/*********************ANIMATION STUFF******************** */
 .arrayContainer {
-  position: relative;
-  height: 300px;
-  width: 900px;
+  /* position: relative; */
+  height: 20vh;
+  width: 45vw;
   display: flex;
   align-items: center;
   justify-content: space-around; 
   border: 1px solid black;
-  margin: 20px; 
+  background-color: aqua;
+  /* margin: 20px;  */
 }
 
 .box {
-  height: 100px;
-  width: 100px;
-  margin: 5px;
+  height: 50%;
+  width: 15%;
+  /* margin: 5px; */
   display: inline-block;
   border: 1px solid black;
   transition: background-color 0.3s; 

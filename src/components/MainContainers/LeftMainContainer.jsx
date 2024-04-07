@@ -2,6 +2,7 @@ import React from 'react';
 
 
 
+
 const LeftMainContainer = () => {
   const description = `
   CODE:
@@ -10,7 +11,7 @@ const LeftMainContainer = () => {
   };
   `
     return (
-      <div>
+      <div className="left">
         <div className="left-main-container">
           <h2>
             What is the problem?
