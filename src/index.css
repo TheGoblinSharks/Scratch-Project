@@ -43,7 +43,6 @@ body {
     /* width: 500px; */
     /* flex-grow: 2; */
     width: 40vw;
-
 }
 
 .left-main-container {
@@ -58,6 +57,9 @@ body {
     /**/
     height: 80%;
     width: 80%;
+
+    padding:1.5rem;
+    border-radius:10px;
 }
 
 .right {
@@ -125,6 +127,52 @@ body {
 }
 
 .hover {
+
+  background-color: yellow; 
+}
+
+.tool-tip {
+  position:relative;
+}
+
+.tool-tip:hover {
+  background-color: rgba(255,255,255,0.5);
+  cursor:help;
+}
+
+.explanation {
+  font-size:1.5rem;
+
+}
+
+.tool-tip-text {
+  visibility: hidden;
+  width:300px;
+  border-radius:5px;
+  padding:15px;
+  border: 2px solid black;
+
+  position:absolute;
+  text-wrap: wrap;
+  background:white;
+  bottom:100%;
+  left:50%;
+  margin-left:-50px;
+}
+
+.tool-tip:hover .tool-tip-text{
+  visibility: visible;
+}
+
+.iterate-button {
+  border:2px solid black;
+  background:blue;
+  border-radius:10px;
+  height:50px;
+  width:150px;
+  color:white;
+  font-size:1.25rem;
+  cursor:pointer;
   background-color: rgba(255, 255, 0, 0.255); 
 }
 

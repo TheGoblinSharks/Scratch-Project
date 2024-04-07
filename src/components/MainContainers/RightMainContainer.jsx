@@ -1,16 +1,17 @@
 import React from 'react';
-import Animation from '../animation';
+import ArrayContainer from '../ArrayContainer';
+
 
 
 const RightMainContainer = () => {
-    return (
-      <div className="right">
-        <div className="right-main-container">
-            <Animation/>
-        </div>
+  return (
+    <div>
+      <div className="right-main-container">
+        <ArrayContainer  arrayData={[0, 1, 2, 3, 4]} currentIndex={0} />
       </div>
-    );
-  };
+    </div>
+  );
+};
   
-  export default RightMainContainer;
+export default RightMainContainer;
   
