@@ -28,8 +28,9 @@ body {
 .column-wrapper {
     display: flex;
     /**/
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
-
     width: 100vw;
     height: 88.5vh;
 }
@@ -42,7 +43,7 @@ body {
 
     /* width: 500px; */
     /* flex-grow: 2; */
-    width: 40vw;
+    width: 50vw;
 }
 
 .left-main-container {
@@ -131,12 +132,18 @@ body {
   background-color: yellow; 
 }
 
+/* ========= MIKES CSS =========== */
+
+.code-example {
+  font-size:1.25rem;
+}
+
 .tool-tip {
   position:relative;
 }
 
 .tool-tip:hover {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,0);
   cursor:help;
 }
 
@@ -172,9 +179,10 @@ body {
   width:150px;
   color:white;
   font-size:1.25rem;
-  cursor:pointer;
-  background-color: rgba(255, 255, 0, 0.255); 
+  cursor:pointer; 
 }
+
+/* =========MIKES CSS END========= */
 
 /********************* OTHER ******************** */
 

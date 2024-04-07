@@ -1,7 +1,8 @@
-import React from 'react';
 import '../../index.css';
 
-const ArrayContainer = ({ arrayData, currentIndex }) => {
+const ArrayContainer = (props) => {
+
+  const { arrayData, currentIndex } = props
   
   return (
     <div className="arrayContainer">
