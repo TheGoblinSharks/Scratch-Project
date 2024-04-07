@@ -6,7 +6,8 @@ const NavBar = () => {
     return (
       <div>
         <nav>
-            <p>test</p>
+          <img src="src/assets/CSX-logo.png"></img>
+          <img className="circle" src="src/assets/will-sentance-pfp.jpg"></img>
         </nav>
       </div>
     );

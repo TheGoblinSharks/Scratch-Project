@@ -2,11 +2,11 @@ import React from 'react';
 
 
 
+
 const LeftMainContainer = () => {
     return (
-      <div>
+      <div className="left">
         <div className="left-main-container">
-
         </div>
       </div>
     );
