@@ -14,7 +14,7 @@ function App() {
         <LeftMainContainer/>
         <RightMainContainer/>
       </div>
-
+      <div className="footer-line"></div>
     </div>
     </>
   )

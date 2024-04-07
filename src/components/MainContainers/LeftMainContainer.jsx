@@ -1,4 +1,5 @@
 import React from 'react';
+import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = () => {
   const description = `
@@ -66,7 +67,9 @@ const LeftMainContainer = () => {
           </h2>
           
 
+
         </div>
+        {/* <div className="line"></div> */}
       </div>
     );
   };

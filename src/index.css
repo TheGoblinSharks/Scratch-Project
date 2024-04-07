@@ -4,12 +4,12 @@
 * {
     /* border: 1px solid red; */
     box-sizing: border-box;
-    /* border-radius: 3px; */
+    border-radius: 4px;
 }
 /**/
 body {
     display: flex;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -20,18 +20,18 @@ body {
     justify-content: space-between;
     /**/
     width: 100%;
-    height: 7vh/* 70px */;
+    height: 7.5vh;
     background-color: rgb(47, 54, 61);
+    border-radius: 0;
  }
 
 .column-wrapper {
     display: flex;
     /**/
-    /* background-color: rgb(255, 255, 255); */
-    background-color: rgba(172, 81, 81, 0.078);
+    background-color: rgb(255, 255, 255);
 
     width: 100vw;
-    height: 93vh;
+    height: 88.5vh;
 }
 
 .left {
@@ -40,23 +40,24 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 255, 0.1)/* rgb(250, 250, 250) */;
     /* width: 500px; */
     /* flex-grow: 2; */
     width: 40vw;
-
-
 }
 
 .left-main-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     /**/
-    background-color: rgba(0, 0, 255, 0.5)/* rgb(250, 250, 250) */;
-    
+    background-color: rgb(250, 250, 250);
+    border: 20px solid #eee;
+    box-shadow: 1px 1px 2px #ddd;
+    /**/
     height: 80%;
     width: 80%;
+
     padding:1.5rem;
     border-radius:10px;
 }
@@ -65,7 +66,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 128, 0, 0.1)/* rgb(250, 250, 250) */;
+    /* border-left: 1px solid gray; */
     flex-grow: 1;
 }
 
@@ -74,17 +75,16 @@ body {
     justify-content: center;
     align-items: center;
     /**/
-    /* background-color: rgb(37, 37, 37); */
-    /* color: white; */
-
-    background-color: rgba(0, 128, 0, 0.5)/* rgb(250, 250, 250) */;
-    
+    background-color: rgb(37, 37, 37);
+    color: rgb(87, 103, 184);
+    border: 20px solid #eee;
+    box-shadow: 1px 1px 2px #ddd;
+    /**/
     height: 80%;
     width: 80%;
-
 }
 
- /* ********************INNER COMPONENTS/CONTAINERS/THINGS******************** */
+ /* ******************** INNER COMPONENTS/CONTAINERS/THINGS ******************** */
 
 .solution-container {
     display: flex;
@@ -93,29 +93,26 @@ body {
 }
 
 .primary-solution-display {
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
-img {
-    margin: 15px;
-}
-.circle {
-    border-radius: 50%;
+.code-input-title{
+    
 }
 
 
 
 
-/*********************ANIMATION STUFF******************** */
+/********************* ANIMATION STUFF ******************** */
 .arrayContainer {
   /* position: relative; */
   height: 20vh;
-  width: 45vw;
+  width:40vw;
   display: flex;
   align-items: center;
   justify-content: space-around; 
-  border: 1px solid black;
-  background-color: aqua;
+  border: 1px solid rgb(87, 103, 184);
+  /* background-color: aqua; */
   /* margin: 20px;  */
 }
 
@@ -124,11 +121,13 @@ img {
   width: 15%;
   /* margin: 5px; */
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid rgb(87, 103, 184);
+  /* border-radius: 4px; */
   transition: background-color 0.3s; 
 }
 
 .hover {
+
   background-color: yellow; 
 }
 
@@ -174,4 +173,40 @@ img {
   color:white;
   font-size:1.25rem;
   cursor:pointer;
+  background-color: rgba(255, 255, 0, 0.255); 
+}
+
+/********************* OTHER ******************** */
+
+img {
+    margin: 9px;
+}
+.circle {
+    border-radius: 50%;
+}
+
+/* .line {
+    width: 1px;
+    height: 80%;
+    background-color: gray;
+    transform: translateX(5vw);
+} */
+.footer-line {
+    /* height: 20px; */
+    height: 4vh;;
+    width: 100vw;
+    background-color: #eee;
+}
+
+button {
+    background: lightslategrey;
+    border: none;
+    margin: 0;
+    padding: 6px;
+    /* text-align: inherit; */
+    /* font: inherit; */
+    appearance: none;
+    border-radius: 4px;
+    background-color: #09f;
+    color: #fff;
 }
