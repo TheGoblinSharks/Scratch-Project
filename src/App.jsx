@@ -7,14 +7,18 @@ import MatrixContainer from './Containers/MatrixContainer'; // Make sure to impo
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="quickFix2">
       <h1>Welcome to the Home Page</h1>
-      <Link to="/array">
-        <button>Go to Array Visualization</button>
-      </Link>
-      <Link to="/matrix">
-        <button>Go to Matrix Visualization</button>
-      </Link>
+      <div className="quickFix2Inner">
+        <Link to="/array">
+          <button>Go to Array Visualization</button>
+        </Link>
+        <Link to="/matrix">
+          <button>Go to Matrix Visualization</button>
+        </Link>
+      </div>
+      <img className="quickFix3" src="src/assets/shark-goblins.jpg"></img>
+
     </div>
   );
 };
