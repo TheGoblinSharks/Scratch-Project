@@ -16,6 +16,7 @@ function App() {
         <NavBar/>
         <div className="column-wrapper">
           <LeftMainContainer onIterate={handleIterate}/>
+          <div className="line"></div>
           <RightMainContainer currentIndex={currentIndex}/>
         </div>
         <div className="footer-line"></div>
