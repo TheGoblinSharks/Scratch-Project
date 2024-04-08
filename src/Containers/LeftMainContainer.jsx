@@ -14,6 +14,32 @@ const LeftMainContainer = (props) => {
         <h2>
           How do we move between each element in an array?
         </h2>
+
+        {/* TO CHANGE BUTTON
+        onValueChange(event) {
+            this.setState({
+              selectedOption: event.target.value
+            });
+          }
+        */}
+
+        <form>
+          <fieldset>
+            <legend>Array type:</legend>
+            <div>
+              <input type="radio" id="flatArray" name="arrayType" value="flatArray" /* checked *//>
+              <label htmlFor="flatArray">Flat</label>
+
+              <input type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
+              <label htmlFor="twoDArray">2D</label>
+
+              <input type="radio" id="custom" name="arrayType" value="custom" />
+              <label htmlFor="custom">Custom</label>
+            </div>
+
+          </fieldset>
+        </form>
+      
         <div>
           {/* <span className="explanation">Explanation:</span> */}
           <p>
@@ -26,7 +52,7 @@ const LeftMainContainer = (props) => {
         </div>
 
 
-        <pre className="code-example">
+        <pre className="code-example center">
           {/* {description} */}
           {/* <code> */}
             {`for (`}
@@ -35,7 +61,7 @@ const LeftMainContainer = (props) => {
                   let i = 0;
                 </code>
                 <span className="tool-tip-text">
-                  Sets where we start in our array. In JavaScript arrays are zero indexed which means we start at position 0 instead of position 1
+                  Sets where we start in our array.<br/><br/>In JavaScript arrays are zero indexed which means we start at position 0 instead of position 1
                 </span>
               </span>
 
@@ -47,7 +73,7 @@ const LeftMainContainer = (props) => {
                 </code>
                 {/* {`i < 4;`} */}
                 <span className="tool-tip-text">
-                  Sets when we want our loop to stop. In our case this block is saying keep moving through the items in the array as long as we are at a position that is less than 4
+                  Sets when we want our loop to stop<br/><br/>In our case this block is saying keep moving through the items in the array as long as we are at a position that is less than 4
                 </span>
               </span>
               
@@ -59,7 +85,7 @@ const LeftMainContainer = (props) => {
                 </code>
                 {/* i++ */}
                 <span className="tool-tip-text">
-                  {`Sets our "step" or how many positions we want move. In our case we are telling our for loop to move only one item at at time. We could have i += 2 here and in that case we would move two positions each time`}
+                  Sets our '<em>step</em>' or how many positions we want move.<br/><br/>In our case we are telling our for loop to move only one item at at time. We could have i += 2 here and in that case we would move two positions each time
                 </span>
               </span>
               {`) {\n  console.log(array[i]);\n}`};
@@ -68,10 +94,15 @@ const LeftMainContainer = (props) => {
 
         </pre>
 
-        <p>
-          Lets put it all together and walk through this for loop one step at a time <br></br>
-          (<b>What do you think will happen to our yellow block when you press the button?</b>)
-        </p>
+        <div className="center">
+          <p>
+            Lets put it all together and walk through this for loop one step at a time.
+          </p>
+          <p className="fade">
+            What do you think will happen to our yellow block when you press the button?
+          </p>
+        </div>
+
 
         <button className="iterate-button" onClick={onIterate}> 
           Iterate
