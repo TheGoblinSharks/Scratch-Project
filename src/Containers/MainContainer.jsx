@@ -12,6 +12,7 @@ function MainContainer() {
   return (
     <main className="column-wrapper">
       <LeftMainContainer onIterate={handleIterate} currentIndex={currentIndex} />
+      <div className="line"></div>
       <RightMainContainer currentIndex={currentIndex}/>
     </main>
   );
