@@ -1,9 +1,14 @@
-import React from 'react';
-import './index.css';
+import '../../index.css';
 
-const ArrayContainer = ({ arrayData, currentIndex }) => {
+const ArrayContainer = (props) => {
+
+  const { arrayData, currentIndex } = props
+  
   return (
     <div className="arrayContainer">
+      <div className="overlay">
+        
+      </div>
       {arrayData.map((item, index) => (
         <div key={index} className={`box ${index === currentIndex ? 'hover' : ''}`}>
           {item}
