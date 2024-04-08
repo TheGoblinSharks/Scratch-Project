@@ -1,8 +1,9 @@
-
-const Box = () => {
+// Box.jsx
+const Box = ({ isActive }) => {
+  const activeClass = isActive ? 'box active' : 'box';
   return (
-    <div className="box"></div>
-  )
-}
+    <div className={activeClass}></div>
+  );
+};
 
-export default Box
+export default Box;
