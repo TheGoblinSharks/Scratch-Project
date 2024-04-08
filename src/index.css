@@ -2,30 +2,37 @@
  /* ********************MAIN STRUCTURE/CONTAINERS******************** */
 
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
-    /* border-radius: 3px; */
+    border-radius: 4px;
 }
 /**/
 body {
     display: flex;
-    background-color: rgb(255, 255, 255);
-    /* margin: 0; */
+    /* background-color: rgb(255, 255, 255); */
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
  nav {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     /**/
-    width: 100vw;
+    width: 100%;
+    height: 7.5vh;
     background-color: rgb(47, 54, 61);
+    border-radius: 0;
  }
 
 .column-wrapper {
     display: flex;
     /**/
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
     width: 100vw;
+    height: 88.5vh;
 }
 
 .left {
@@ -34,21 +41,34 @@ body {
     justify-content: center;
     align-items: center;
 
+    /* width: 500px; */
+    /* flex-grow: 2; */
+    width: 50vw;
 }
 
 .left-main-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     /**/
     background-color: rgb(250, 250, 250);
+    border: 20px solid #eee;
+    box-shadow: 1px 1px 2px #ddd;
+    /**/
+    height: 80%;
+    width: 80%;
 
+    padding:1.5rem;
+    border-radius:10px;
 }
 
 .right {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border-left: 1px solid gray; */
+    flex-grow: 1;
 }
 
 .right-main-container {
@@ -57,10 +77,15 @@ body {
     align-items: center;
     /**/
     background-color: rgb(37, 37, 37);
-    color: white;
+    color: rgb(87, 103, 184);
+    border: 20px solid #eee;
+    box-shadow: 1px 1px 2px #ddd;
+    /**/
+    height: 80%;
+    width: 80%;
 }
 
- /* ********************INNER COMPONENTS/CONTAINERS/THINGS******************** */
+ /* ******************** INNER COMPONENTS/CONTAINERS/THINGS ******************** */
 
 .solution-container {
     display: flex;
@@ -69,30 +94,127 @@ body {
 }
 
 .primary-solution-display {
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
-/***Ted stuff ***/
+.code-input-title{
+    
+}
+
+
+
+
+/********************* ANIMATION STUFF ******************** */
 .arrayContainer {
-  position: relative;
-  height: 300px;
-  width: 900px;
+  /* position: relative; */
+  height: 20vh;
+  width:40vw;
   display: flex;
   align-items: center;
   justify-content: space-around; 
-  border: 1px solid black;
-  margin: 20px; 
+  border: 1px solid rgb(87, 103, 184);
+  /* background-color: aqua; */
+  /* margin: 20px;  */
 }
 
 .box {
-  height: 100px;
-  width: 100px;
-  margin: 5px;
+  height: 50%;
+  width: 15%;
+  /* margin: 5px; */
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid rgb(87, 103, 184);
+  /* border-radius: 4px; */
   transition: background-color 0.3s; 
 }
 
 .hover {
+
   background-color: yellow; 
+}
+
+/* ========= MIKES CSS =========== */
+
+.code-example {
+  font-size:1.25rem;
+}
+
+.tool-tip {
+  position:relative;
+}
+
+.tool-tip:hover {
+  background-color: rgba(255,255,0);
+  cursor:help;
+}
+
+.explanation {
+  font-size:1.5rem;
+
+}
+
+.tool-tip-text {
+  visibility: hidden;
+  width:300px;
+  border-radius:5px;
+  padding:15px;
+  border: 2px solid black;
+
+  position:absolute;
+  text-wrap: wrap;
+  background:white;
+  bottom:100%;
+  left:50%;
+  margin-left:-50px;
+}
+
+.tool-tip:hover .tool-tip-text{
+  visibility: visible;
+}
+
+.iterate-button {
+  border:2px solid black;
+  background:blue;
+  border-radius:10px;
+  height:50px;
+  width:150px;
+  color:white;
+  font-size:1.25rem;
+  cursor:pointer; 
+}
+
+/* =========MIKES CSS END========= */
+
+/********************* OTHER ******************** */
+
+img {
+    margin: 9px;
+}
+.circle {
+    border-radius: 50%;
+}
+
+/* .line {
+    width: 1px;
+    height: 80%;
+    background-color: gray;
+    transform: translateX(5vw);
+} */
+.footer-line {
+    /* height: 20px; */
+    height: 4vh;;
+    width: 100vw;
+    background-color: #eee;
+}
+
+button {
+    background: lightslategrey;
+    border: none;
+    margin: 0;
+    padding: 6px;
+    /* text-align: inherit; */
+    /* font: inherit; */
+    appearance: none;
+    border-radius: 4px;
+    background-color: #09f;
+    color: #fff;
 }
