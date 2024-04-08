@@ -2,21 +2,15 @@
 // import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = (props) => {
-  const { setCurrentAlgo, setCurrentIndex, currentIndex } = props;
-
-  const handleIterate = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % 5);
-  };
-
-  const handleSetAlgo = () => {
-    // newAlgo is what the radiobutton is set to
-    setCurrentAlgo(newAlgo);
-  }
-
+  const { currentIndex,setCurrentIndex } = props;
   let outputString = '';
   for (let i = 0; i <= currentIndex; i++) {
     outputString = `${outputString} \n${i}`;
   } 
+
+  const handleIterate = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1));
+  };
 
   return (
     <div className="left">

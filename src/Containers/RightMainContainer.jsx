@@ -21,6 +21,9 @@ const RightMainContainer = (props) => {
       );
     case 'twoDArray': 
       // substitu mike's return in here and delete the 'break;' in this case
+          // <NpathsContainer
+          //   currentIndex={currentIndex}
+          // />
       break;
     case 'custom' : 
       // leave blank
