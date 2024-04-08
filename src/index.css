@@ -120,16 +120,14 @@ body {
 .box {
   height: 50%;
   width: 15%;
-  /* margin: 5px; */
   display: inline-block;
   border: 2px solid rgb(87, 103, 184);
-  /* border-radius: 4px; */
-  transition: background-color 0.3s; 
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out; /* Add transform transition here */
 }
 
 .hover {
-
   background-color: yellow; 
+  transform: scale(1.1); /* Add a scale transform to make the box grow a bit */
 }
 
 /* ========= MIKES CSS =========== */
