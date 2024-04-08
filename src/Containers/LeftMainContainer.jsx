@@ -2,11 +2,15 @@
 // import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = (props) => {
-  const { onIterate, currentIndex } = props;
+  const { currentIndex,setCurrentIndex } = props;
   let outputString = '';
   for (let i = 0; i <= currentIndex; i++) {
     outputString = `${outputString} \n${i}`;
   } 
+
+  const handleIterate = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1));
+  };
 
   return (
     <div className="left">
@@ -73,7 +77,7 @@ const LeftMainContainer = (props) => {
           (<b>What do you think will happen to our yellow block when you press the button?</b>)
         </p>
 
-        <button className="iterate-button" onClick={onIterate}> 
+        <button className="iterate-button" onClick={handleIterate}> 
           Iterate
         </button>
 
