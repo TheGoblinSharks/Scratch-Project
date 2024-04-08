@@ -2,21 +2,19 @@
 // import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = (props) => {
-  const { setCurrentAlgo, setCurrentIndex, currentIndex } = props;
-
-  const handleIterate = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % 5);
-  };
-
-  const handleSetAlgo = () => {
-    // newAlgo is what the radiobutton is set to
-    setCurrentAlgo(newAlgo);
-  }
-
+  const { setCurrentAlgo, currentIndex, setCurrentIndex } = props;
   let outputString = '';
   for (let i = 0; i <= currentIndex; i++) {
     outputString = `${outputString} \n${i}`;
   } 
+
+  const handleIterate = () => {
+    setCurrentIndex((prevIndex) => ((prevIndex + 1) % 5));
+  };
+
+  const handleAlgo = (e) => {
+    setCurrentAlgo(e.target.value);
+  };
 
   return (
     <div className="left">
@@ -37,13 +35,13 @@ const LeftMainContainer = (props) => {
           <fieldset>
             <legend>Array type:</legend>
             <div>
-              <input type="radio" id="flatArray" name="arrayType" value="flatArray" /* checked *//>
+              <input checked onChange={(e) => handleAlgo(e)} type="radio" id="flatArray" name="arrayType" value="flatArray" checked/>
               <label htmlFor="flatArray">Flat</label>
 
-              <input type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
+              <input onChange={(e) => handleAlgo(e)} type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
               <label htmlFor="twoDArray">2D</label>
 
-              <input type="radio" id="custom" name="arrayType" value="custom" />
+              <input onChange={(e) => handleAlgo(e)} type="radio" id="custom" name="arrayType" value="custom" />
               <label htmlFor="custom">Custom</label>
             </div>
 
@@ -113,10 +111,13 @@ const LeftMainContainer = (props) => {
           </p>
         </div>
 
+        <div className="quickFix">
+          <button className="iterate-button" onClick={handleIterate}> 
+            Iterate
+          </button>
+        </div>
 
-        <button className="iterate-button" onClick={handleIterate}> 
-          Iterate
-        </button>
+
 
         <div className="output" style={{'textAlign':'left', 'alignSelf':'flex-start'}}>
           <h2 style={{'marginBottom': '0px'}}>

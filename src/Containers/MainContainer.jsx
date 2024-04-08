@@ -4,7 +4,7 @@ import RightMainContainer from './RightMainContainer';
 
 function MainContainer() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentAlgo, setCurrentAlgo] = useState('array');
+  const [currentAlgo, setCurrentAlgo] = useState('flatArray');
 
   return (
     <main className="column-wrapper">
