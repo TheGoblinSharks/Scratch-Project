@@ -1,5 +1,5 @@
 
-// import UserInputCode from '../userInputCode';
+import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = ({onIterate}) => {
 

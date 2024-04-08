@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavBar from './components/navBar';
 import LeftMainContainer from './Containers/LeftMainContainer'; 
 import RightMainContainer from './Containers/RightMainContainer'; 
