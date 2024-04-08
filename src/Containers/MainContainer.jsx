@@ -4,12 +4,19 @@ import RightMainContainer from './RightMainContainer';
 
 function MainContainer() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentAlgo, setCurrentAlgo] = useState('array');
 
   return (
     <main className="column-wrapper">
-      <LeftMainContainer currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+      <LeftMainContainer 
+        setCurrentAlgo={setCurrentAlgo} 
+        setCurrentIndex={setCurrentIndex} 
+        currentIndex={currentIndex}
+      />
       <div className="line"></div>
-      <RightMainContainer currentIndex={currentIndex}/>
+      <RightMainContainer
+        currentAlgo={currentAlgo}
+        currentIndex={currentIndex}/>
     </main>
   );
 }
