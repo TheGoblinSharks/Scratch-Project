@@ -4,16 +4,19 @@ import RightMainContainer from './RightMainContainer';
 
 function MainContainer() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleIterate = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % 5);
-  };
+  const [currentAlgo, setCurrentAlgo] = useState('array');
 
   return (
     <main className="column-wrapper">
-      <LeftMainContainer onIterate={handleIterate} currentIndex={currentIndex} />
+      <LeftMainContainer 
+        setCurrentAlgo={setCurrentAlgo} 
+        setCurrentIndex={setCurrentIndex} 
+        currentIndex={currentIndex}
+      />
       <div className="line"></div>
-      <RightMainContainer currentIndex={currentIndex}/>
+      <RightMainContainer
+        currentAlgo={currentAlgo}
+        currentIndex={currentIndex}/>
     </main>
   );
 }
