@@ -1,7 +1,12 @@
 
 // import UserInputCode from '../userInputCode';
 
-const LeftMainContainer = ({onIterate}) => {
+const LeftMainContainer = (props) => {
+  const { onIterate, currentIndex } = props;
+  let outputString = '';
+  for (let i = 0; i <= currentIndex; i++) {
+    outputString = `${outputString} \n${i}`;
+  } 
 
     return (
       <div className="left">
@@ -76,13 +81,16 @@ const LeftMainContainer = ({onIterate}) => {
           <h2>
             Output:
           </h2>
-          
-
-
+          <pre style={{'marginTop': '0px'}}>
+            {outputString}
+          </pre>
         </div>
-        {/* <div className="line"></div> */}
+      
+        
       </div>
-    );
-  };
+      {/* <div className="line"></div> */}
+    </div>
+  );
+};
   
-  export default LeftMainContainer;
+export default LeftMainContainer;
