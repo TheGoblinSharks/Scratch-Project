@@ -2,14 +2,14 @@
 // import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = (props) => {
-  const { currentIndex,setCurrentIndex } = props;
+  const { currentIndex, setCurrentIndex } = props;
   let outputString = '';
   for (let i = 0; i <= currentIndex; i++) {
     outputString = `${outputString} \n${i}`;
   } 
 
   const handleIterate = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1));
+    setCurrentIndex((prevIndex) => ((prevIndex + 1) % 5));
   };
 
   return (
