@@ -1,7 +1,7 @@
 
 // import UserInputCode from '../userInputCode';
 
-const LeftMainContainer = () => {
+const LeftMainContainer = ({onIterate}) => {
 
     return (
       <div className="left">
@@ -54,7 +54,7 @@ const LeftMainContainer = () => {
             (<b>What do you think will happen to our yellow block when you press the button?</b>)
           </p>
 
-          <button className="iterate-button">
+          <button className="iterate-button" onClick={onIterate}> 
             ITERATE
           </button>
 
