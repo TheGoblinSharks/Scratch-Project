@@ -111,10 +111,13 @@ const LeftMainContainer = (props) => {
           </p>
         </div>
 
+        <div className="quickFix">
+          <button className="iterate-button" onClick={handleIterate}> 
+            Iterate
+          </button>
+        </div>
 
-        <button className="iterate-button" onClick={handleIterate}> 
-          Iterate
-        </button>
+
 
         <div className="output" style={{'textAlign':'left', 'alignSelf':'flex-start'}}>
           <h2 style={{'marginBottom': '0px'}}>

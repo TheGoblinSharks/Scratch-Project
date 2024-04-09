@@ -1,5 +1,5 @@
 import ArrayContainer from "../components/ArrayContainer";
-import NpathsContainer from "../components/NpathsContainer";
+import NpathsContainer from "../components/NpathsContainer/index.jsx";
 
 const RightMainContainer = (props) => {
   const { currentAlgo, currentIndex } = props;
@@ -22,21 +22,15 @@ const RightMainContainer = (props) => {
         </div>
       );
     case 'twoDArray': 
-      // substitu mike's return in here and delete the 'break;' in this case
-        return (
-          <>
-          <div className="left">
-            <div className="right-main-container">
-              <div className="animation-wrapper">
-              <NpathsContainer
-                currentIndex={currentIndex}
-              />
-              </div>
-            </div>
+    return (
+      <div className="left">
+        <div className="right-main-container">
+          <div className="animation-wrapper">
+            <NpathsContainer currentIndex={currentIndex} />
           </div>
-          </>
-          
-        )
+        </div>
+      </div>
+    );
     case 'custom' : 
       // leave blank
       break;
