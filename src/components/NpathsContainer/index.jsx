@@ -5,7 +5,6 @@ import nPaths from "./helpers"
 const NpathsContainer = (props) => {
   const { currentIndex } = props
   const [ positions, setPositions ] = useState([0,0])
-  console.log(positions)
   const currentPosition = positions[currentIndex]
 
   let rowOne = 0

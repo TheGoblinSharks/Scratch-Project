@@ -2,14 +2,18 @@
 // import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = (props) => {
-  const { currentIndex,setCurrentIndex } = props;
+  const { currentIndex,setCurrentIndex, setCurrentAlgo } = props;
   let outputString = '';
   for (let i = 0; i <= currentIndex; i++) {
     outputString = `${outputString} \n${i}`;
   } 
 
+  const onChange = (e) => {
+    setCurrentAlgo(e.target.value);
+  };
+
   const handleIterate = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % 5);
   };
 
   return (
@@ -31,13 +35,13 @@ const LeftMainContainer = (props) => {
           <fieldset>
             <legend>Array type:</legend>
             <div>
-              <input type="radio" id="flatArray" name="arrayType" value="flatArray" /* checked *//>
+              <input checked onChange={(e) => onChange(e)} type="radio" id="flatArray" name="arrayType" value="flatArray" /* checked *//>
               <label htmlFor="flatArray">Flat</label>
 
-              <input type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
+              <input onChange={(e) => onChange(e)} type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
               <label htmlFor="twoDArray">2D</label>
 
-              <input type="radio" id="custom" name="arrayType" value="custom" />
+              <input onChange={(e) => onChange(e)} type="radio" id="custom" name="arrayType" value="custom" />
               <label htmlFor="custom">Custom</label>
             </div>
 
