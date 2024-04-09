@@ -17,7 +17,13 @@ const HomePage = () => {
           <button>Go to Matrix Visualization</button>
         </Link>
       </div>
-      <img className="quickFix3" src="src/assets/shark-goblins.jpg"></img>
+      <div>
+      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <img className="quickFix3" src="src/assets/shark-goblins.jpg"></img>
+      </div>
 
     </div>
   );

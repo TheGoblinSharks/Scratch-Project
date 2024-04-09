@@ -5,7 +5,7 @@
   /* border: 1px solid red; */
   box-sizing: border-box;
   border-radius: 4px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 
 #root {
@@ -180,7 +180,8 @@ body {
   padding:15px;
   /* border: 1px solid black; */
   border: 1px solid rgba(117, 117, 117, 0.617);
-  color: rgba(117, 117, 117, 0.617);
+  /* color: rgba(117, 117, 117, 0.617); */
+  color:rgba(0,0,0,0.7);
 
   position:absolute;
   text-wrap: wrap;
@@ -188,7 +189,7 @@ body {
   bottom:100%;
   left:50%;
   margin-left:-50px;
-  font-size: x-small;
+  font-size: large;
 }
 
 .tool-tip:hover .tool-tip-text{
@@ -311,6 +312,12 @@ fieldset {
   border: none;
   /* width: ; */
 }
+.quickFix {
+  /* display: flex; */
+  /* align-content: center; */
+  /* justify-content: center; */
+  width: 150px;
+}
 
 .quickFix2 {
   display: flex;
@@ -327,4 +334,18 @@ fieldset {
 
 .quickFix3 {
   width: 50vw;
+}
+
+/* button{
+  padding: 6px;
+  width: 50px;
+} */
+
+#fixButton{
+  width: 150px;
+}
+
+.idk {
+  display: flex;
+  margin-left: 2.8vw;
 }
