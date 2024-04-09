@@ -4,7 +4,6 @@ import NpathsContainer from "../components/NpathsContainer/index.jsx";
 const RightMainContainer = (props) => {
   const { currentAlgo, currentIndex } = props;
   const arrayData = [0, 1, 2, 3, 4]
-  console.log(currentAlgo)
 
   switch (currentAlgo) {
     case 'flatArray': 
