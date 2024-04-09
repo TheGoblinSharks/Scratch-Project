@@ -9,6 +9,7 @@ function MainContainer() {
   return (
     <main className="column-wrapper">
       <LeftMainContainer 
+        currentAlgo={currentAlgo}
         setCurrentAlgo={setCurrentAlgo} 
         setCurrentIndex={setCurrentIndex} 
         currentIndex={currentIndex}

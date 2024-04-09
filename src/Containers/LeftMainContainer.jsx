@@ -2,25 +2,30 @@
 // import UserInputCode from '../userInputCode';
 
 const LeftMainContainer = (props) => {
-  const { setCurrentAlgo, currentIndex, setCurrentIndex } = props;
+  const { currentIndex, setCurrentIndex, setCurrentAlgo,currentAlgo } = props;
   let outputString = '';
+
   for (let i = 0; i <= currentIndex; i++) {
     outputString = `${outputString} \n${i}`;
   } 
 
-  const handleIterate = () => {
-    setCurrentIndex((prevIndex) => ((prevIndex + 1) % 5));
+  const onChange = (e) => {
+    setCurrentAlgo(e.target.value);
   };
 
-  const handleAlgo = (e) => {
-    setCurrentAlgo(e.target.value);
+  const handleIterate = () => {
+    if(currentAlgo === 'flatArray') {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % 5);
+    }else {
+      setCurrentIndex((prevIndex) => (prevIndex + 1))
+    }
   };
 
   return (
     <div className="left">
       <div className="left-main-container">
         <h2>
-          How do we move between each element in an array?
+          {currentAlgo === 'twoDArray' ? "How many unique paths from top center to bottom right? (N-paths)": "How do we move between each element in an array?"}
         </h2>
 
         {/* TO CHANGE BUTTON
@@ -35,20 +40,22 @@ const LeftMainContainer = (props) => {
           <fieldset>
             <legend>Array type:</legend>
             <div>
-              <input checked onChange={(e) => handleAlgo(e)} type="radio" id="flatArray" name="arrayType" value="flatArray" checked/>
+              <input onChange={(e) => onChange(e)} type="radio" id="flatArray" name="arrayType" value="flatArray" /* checked *//>
               <label htmlFor="flatArray">Flat</label>
 
-              <input onChange={(e) => handleAlgo(e)} type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
+              <input onChange={(e) => onChange(e)} type="radio" id="twoDArray" name="arrayType" value="twoDArray" />
               <label htmlFor="twoDArray">2D</label>
 
-              <input onChange={(e) => handleAlgo(e)} type="radio" id="custom" name="arrayType" value="custom" />
+              <input onChange={(e) => onChange(e)} type="radio" id="custom" name="arrayType" value="custom" />
               <label htmlFor="custom">Custom</label>
             </div>
 
           </fieldset>
         </form>
       
-        <div>
+        {currentAlgo === "flatArray" &&
+        <>
+          <div>
           {/* <span className="explanation">Explanation:</span> */}
           <p>
             We can use a handy built in JavaScript statement called a for loop!
@@ -57,10 +64,10 @@ const LeftMainContainer = (props) => {
             A for loop has three parts each separated by a semi colon <b>;</b> <br></br>
             (try hovering over each section of the for loop below!)
           </p>
-        </div>
+          </div>
 
 
-        <pre className="code-example center">
+          <pre className="code-example center">
           {/* {description} */}
           {/* <code> */}
             {`for (`}
@@ -110,24 +117,38 @@ const LeftMainContainer = (props) => {
             What do you think will happen to our yellow block when you press the button?
           </p>
         </div>
+        </>
+        }
+        
 
-        <div className="quickFix">
-          <button className="iterate-button" onClick={handleIterate}> 
-            Iterate
-          </button>
+          <div className="idk">
+            <div className="quickFix">
+
+              <button id="fix-button" className="iterate-button center" onClick={handleIterate}> 
+                Iterate
+
+              </button>
+
+            </div>
+
         </div>
 
 
-
+        {currentAlgo === 'flatArray' &&
+        <>
         <div className="output" style={{'textAlign':'left', 'alignSelf':'flex-start'}}>
-          <h2 style={{'marginBottom': '0px'}}>
-            OUTPUT:
-          </h2>
-          <pre style={{'marginTop': '0px'}}>
-            {outputString}
-          </pre>
-        </div>
+        <h2 style={{'marginBottom': '0px'}}>
+          OUTPUT:
+        </h2>
+        <pre style={{'marginTop': '0px'}}>
+          {outputString}
+        </pre>
       </div>
+    </>
+        }
+    </div>
+
+        
     </div>
   );
 };
