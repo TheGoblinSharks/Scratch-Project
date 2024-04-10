@@ -1,8 +1,9 @@
 
 // import UserInputCode from '../userInputCode';
+import React from 'react'
 
 const LeftMainContainer = (props) => {
-  const { currentIndex, setCurrentIndex, setCurrentAlgo,currentAlgo } = props;
+  const { currentIndex, setCurrentIndex, setCurrentAlgo, currentAlgo } = props;
   let outputString = '';
 
   for (let i = 0; i <= currentIndex; i++) {
@@ -124,9 +125,12 @@ const LeftMainContainer = (props) => {
           <div className="idk">
             <div className="quickFix">
 
-              <button id="fix-button" className="iterate-button center" onClick={handleIterate}> 
+              <button 
+                id="fix-button" 
+                className="iterate-button center" 
+                onClick={handleIterate}
+              > 
                 Iterate
-
               </button>
 
             </div>
