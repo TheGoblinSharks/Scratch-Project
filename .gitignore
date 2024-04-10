@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+package-lock.json
+jest.config.js
+coverage
+
 node_modules
 dist
 dist-ssr
