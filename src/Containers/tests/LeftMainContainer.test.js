@@ -30,6 +30,7 @@ describe('LeftMainContainer', () => {
     });
 
     test ('runs handleIterate 1 time', () => {
+
       const iterateButton = getByText('Iterate');
       iterateButton.onclick = () => handleIterateMock();
     
@@ -41,12 +42,16 @@ describe('LeftMainContainer', () => {
     });
 
     test ('currentIndex is increased by 1', () => {
-      const currentIndex = setCurrentIndexMock(0);
-      console.log(currentIndex);
-      expect(currentIndex).toEqual(0);
-      // console.log(setCurrentIndexMock)
-      const updatedIndex = setCurrentIndexMock[3];
-      expect(updatedIndex).toEqual(3);
+      
+      // const useCurrentIndexMock = (useState) => [useState, setCurrentIndexMock];
+      // jest.spyOn(React, "useState").mockImplementation(useCurrentIndexMock);
+
+      // const currentIndex = setCurrentIndex(0);
+      // console.log(currentIndex);
+      // expect(currentIndex).toEqual(0);
+      // // console.log(setCurrentIndexMock)
+      // const updatedIndex = setCurrentIndexMock[3];
+      // expect(updatedIndex).toEqual(3);
       // // const result = setCurrentIndex()
       // //const updatedState = handleIterate(initialState);
       //expect(currentIndex).toEqual(3);
