@@ -6,48 +6,96 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import LeftMainContainer from '../LeftMainContainer.jsx';
 
-describe('iterate button tests', () => {
-  xit('currentIndex is different from previous currentIndex', () => {
-    const oldResult = 0;
-    const iterateButton = app.querySelector(`[id="fix-button"]`)
-    console.log(iterateButton)
-  });
-
-  it('currentIndex is increased by 1', () => {
-
-  });
-
-  xit('currentIndex = 4 becomes currentIndex = 0', () => {
-
-  });
-});
-
 describe('LeftMainContainer', () => {
-  test('handleIterate function is called when the Iterate button is clicked', () => {
-    // Mock handleIterate function
-    const handleIterateMock = jest.fn();
+    
+  describe('iterate button tests', () => {
+    // let handleIterateMock;
+    let getByText;
 
-    // Render LeftMainContainer component with mock function
-    const { getByText } = render(
-      <LeftMainContainer
-        handleIterate={handleIterateMock}
-        currentIndex={0}
-        setCurrentIndex={() => {}}
-        setCurrentAlgo={() => {}}
-        currentAlgo="flatArray"
-      />
-    );
+    beforeEach(() => {
+      // const handleIterateMock = jest.fn();
+      handleIterateMock = jest.fn();
+      setCurrentIndexMock = jest.fn();
 
-  // Find the "Iterate" button
-  const iterateButton = getByText('Iterate');
-  iterateButton.onclick = () => handleIterateMock();
-  
-  // Simulate a click on the "Iterate" button
-  fireEvent.click(iterateButton);
+      const renderResult = render(
+        <LeftMainContainer
+          handleIterate={handleIterateMock}
+          currentIndex={0}
+          setCurrentIndex={setCurrentIndexMock}
+          setCurrentAlgo={() => {}}
+          currentAlgo="flatArray"
+        />
+      );
+      getByText = renderResult.getByText;
+    });
 
-  // Check if handleIterateMock is called
-  expect(handleIterateMock).toHaveBeenCalledTimes(1);
+    test ('runs handleIterate 1 time', () => {
+      const iterateButton = getByText('Iterate');
+      iterateButton.onclick = () => handleIterateMock();
+    
+      // Simulate a click on the "Iterate" button
+      fireEvent.click(iterateButton);
+
+      // Check if handleIterateMock is called
+      expect(handleIterateMock).toHaveBeenCalledTimes(1);
+    });
+
+    test ('currentIndex is increased by 1', () => {
+      const currentIndex = setCurrentIndexMock(0);
+      console.log(currentIndex);
+      expect(currentIndex).toEqual(0);
+      // console.log(setCurrentIndexMock)
+      const updatedIndex = setCurrentIndexMock[3];
+      expect(updatedIndex).toEqual(3);
+      // // const result = setCurrentIndex()
+      // //const updatedState = handleIterate(initialState);
+      //expect(currentIndex).toEqual(3);
+        // const marketList = [{ location: 'here', cards: 11 }, { location: 'there', cards: 0 }];
+        // const result = db.sync(marketList);
+        // expect(result).not.toBeInstanceOf(Error);
+      //const updatedState = expect(currentIndex).toEqual(initialState())
+    });
+
+  });
 });
+
+
+
+  
+
+//   xit('currentIndex = 4 becomes currentIndex = 0', () => {
+
+//   });
+// //});
+
+// describe('LeftMainContainer', () => {
+//   xtest('handleIterate function is called when the Iterate button is clicked', () => {
+//     // Mock handleIterate function
+//     const handleIterateMock = jest.fn();
+
+//     // Render LeftMainContainer component with mock function
+//     const { getByText } = render(
+//       <LeftMainContainer
+//         handleIterate={handleIterateMock}
+//         currentIndex={0}
+//         setCurrentIndex={() => {}}
+//         setCurrentAlgo={() => {}}
+//         currentAlgo="flatArray"
+//       />
+//     );
+
+//     // Find the "Iterate" button
+//     const iterateButton = getByText('Iterate');
+//     iterateButton.onclick = () => handleIterateMock();
+  
+//     // Simulate a click on the "Iterate" button
+//     fireEvent.click(iterateButton);
+
+//     // Check if handleIterateMock is called
+//     expect(handleIterateMock).toHaveBeenCalledTimes(1);
+//   });
+// });
+
 
 /*
 CODE GRAVEYARD
